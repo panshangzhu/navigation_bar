@@ -96,7 +96,7 @@ header nav ul li a.active{
     background:#2196f3
 } 
 header nav ul li ul li a{
-    font-size: 0.8em;
+    font-size: 1em;
     background-color:rgba(0,0,0,.4);
     cursor: pointer;
 }
