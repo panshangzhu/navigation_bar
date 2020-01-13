@@ -1,0 +1,266 @@
+body{
+    margin:0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size:0.8em; /*16px*/
+    background-color: bisque;
+}
+header{
+    position: absolute;
+    top:0;
+    left:0;
+    padding: 0 2em 0 7em;
+    background: rgba(0,0,0,.5);
+    width:100%;
+    height:3em;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+header .bg{
+    width:100%;
+    height:20em;
+    z-index: -1;
+    position: absolute;
+    left:0;
+    right:0;
+}
+header .bg img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+header .logo{
+    width:4em;
+    height:4em;
+    line-height: 4em;
+    float:left;
+    /* color:#fff;
+    height:3em;
+    line-height:3em;
+    float:left;
+    font-weight:bold; */
+
+}
+header nav{
+    margin-left:10em; 
+    width:80%;
+}
+header nav ul {
+    margin:0;
+    padding:0;
+    display:flex;
+}
+header nav ul li {
+    list-style: none;
+    width:100%;
+    text-align: center;
+    position: relative;
+    
+}
+header nav ul li.list:after{
+    content:"";
+    background-image: url(./images/arrowdown.svg);
+    background-size: cover;
+    position: absolute;
+    width:1em;
+    height:1em;
+    top:1em;
+    right:0.1em;
+}
+.listActive:after{
+    content:"";
+    background-image: url(./images/arrowup.svg);
+    background-size: cover;
+    position: absolute;
+    width:1em;
+    height:1em;
+    top:1em;
+    right:0.1em;
+}
+header nav ul li a {
+    height:3em;
+    line-height:3em;
+    padding:0em 2em;
+    color:#fff;
+    text-decoration: none;
+    display: block;
+    background-color: rgba(0,0,0,.5);
+    cursor: pointer;
+}
+header nav ul li ul{
+    display:none;
+}
+
+header nav ul li a.active{
+    color:#fff;
+    background:#2196f3
+} 
+header nav ul li ul li a{
+    font-size: 0.8em;
+    background-color:rgba(0,0,0,.4);
+    cursor: pointer;
+}
+header nav ul li.active ul{
+    display:block;
+    transition:0.5s ease-in;
+}
+header .language{
+    top:0.3em;
+    border:none;
+    padding-right: 0.3em;
+}
+header .language button{
+    border:none;
+    border-radius: 5%;
+}
+header .language a{
+    width:100%;
+    height:100%;
+    font-size: 0.8em;
+    padding: 0;
+    background-color: transparent;
+    color:grey;
+   
+}
+/* .email{
+    width:17em;
+    height:2em;
+    margin-left:1em;
+    line-height: 2em;
+}  */
+.email img{
+    width:6em;
+    height:3em;
+    line-height: 3em;
+}
+.email a{
+    padding:0;
+    margin:0;
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: transparent;
+   
+}
+.trail{
+    width:4em;
+    height:3em;
+    line-height: 3em;
+    margin-right:4em;
+    
+}
+.trail button{
+    width:5em;
+    margin-left: 1.5em;
+    height:100%;
+    border-radius: 10%;
+    background-color: rosybrown;
+    border:none;
+}
+header .trail a{
+    width: 100%;
+    margin:0;
+    padding:0;
+    background-color: transparent;
+}
+.burger {
+    display: none;
+    cursor: pointer;
+  }
+
+@media screen and (max-width:998px){
+
+      .burgertoggle .line1 {
+        transform: rotate(-45deg) translate(-0.3em, 0.3em);
+      }
+      .burgertoggle .line2 {
+        opacity: 0;
+      }
+      .burgertoggle .line3 {
+        transform: rotate(45deg) translate(-0.25em, -0.3em);
+      }
+    
+    
+    header
+    {
+        padding:0.1em 0.5em;
+        z-index: 2;
+    }
+    header nav{
+        position:absolute;
+        width:50%;
+        background: #333333;
+        top:3em;
+        right:0;
+        transform: translateX(110%);
+        display:none;
+        transition: transform 0.5s ease;
+    }
+    header nav.active{
+        right:0;
+    }
+    header nav ul{
+        display:block;
+        text-align:center;
+    }
+    header nav ul li {
+        width:100%;
+        position:relative;
+    }
+    header nav ul li a {
+        border-bottom:1px solid rgba(0,0,0,.2)   
+    }
+   
+    header nav ul li ul{
+        display:none; 
+    }
+    header nav ul li ul li a{
+        background-color:rgba(0,0,0,.1);
+        font-size: 0.8em;
+        cursor: pointer;
+    }
+    header nav ul li.language{
+        height:3em;
+    }
+    header nav ul li.email{
+        display:none;
+    }
+    header nav ul li.trail{
+        width:100%;
+        margin:0;
+    }
+    header nav ul li.trail button{
+        width:50%;
+        height:100%;
+        position: absolute;
+        left:50%;
+        transform: translateX(-50%);
+    }
+    header .trail a{
+        background-color: transparent;
+    }
+
+
+    .burger{
+        display:block;
+        float:right;
+        width:3em;
+        margin-top:0.5em;
+    }
+    .burger div {
+        background-color: rgb(226, 226, 226);
+        width: 1em;
+        height:0.1em;
+        margin:0.3em;
+        transition: all 0.3s ease;
+      }
+    .nav-active{
+        transform: translateX(0%);
+        transition: transform 0.5s ease-in;
+        display:block;
+    }
+}
+
+
