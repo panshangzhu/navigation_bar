@@ -2,14 +2,14 @@ body{
     margin:0;
     padding: 0;
     font-family: sans-serif;
-    font-size:0.8em; /*16px*/
+    font-size:0.9em; /*16px*/
     background-color: bisque;
 }
 header{
     position: absolute;
     top:0;
     left:0;
-    padding: 0 2em 0 7em;
+    padding: 0 2em 0 3em;
     background: rgba(0,0,0,.5);
     width:100%;
     height:3em;
@@ -34,6 +34,7 @@ header .logo{
     height:4em;
     line-height: 4em;
     float:left;
+    margin-left:2em;
     /* color:#fff;
     height:3em;
     line-height:3em;
@@ -42,17 +43,17 @@ header .logo{
 
 }
 header nav{
-    margin-left:10em; 
-    width:80%;
+    margin-left:6em; 
+    width:85%;
 }
 header nav ul {
     margin:0;
     padding:0;
-    display:flex;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr 2fr ;
 }
 header nav ul li {
     list-style: none;
-    width:100%;
     text-align: center;
     position: relative;
     
@@ -93,10 +94,10 @@ header nav ul li ul{
 
 header nav ul li a.active{
     color:#fff;
-    background:#2196f3
+    background:#2196f3;
 } 
 header nav ul li ul li a{
-    font-size: 1em;
+    font-size: 0.8em;
     background-color:rgba(0,0,0,.4);
     cursor: pointer;
 }
@@ -129,7 +130,7 @@ header .language a{
     line-height: 2em;
 }  */
 .email img{
-    width:6em;
+    width:3em;
     height:3em;
     line-height: 3em;
 }
@@ -145,15 +146,15 @@ header .language a{
    
 }
 .trail{
-    width:4em;
+   
     height:3em;
     line-height: 3em;
-    margin-right:4em;
+    
     
 }
 .trail button{
-    width:5em;
-    margin-left: 1.5em;
+    
+    
     height:100%;
     border-radius: 10%;
     background-color: rosybrown;
